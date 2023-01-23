@@ -10,5 +10,6 @@ The player controls a little dot and tries to survive as long as possible. There
 
 ## Screenshots 
 
+![dotger_main](https://user-images.githubusercontent.com/104325038/214160294-37eca467-a7ed-4a9e-9b38-b3cf3f0b7593.png)
 
-
+![dotger_settings](https://user-images.githubusercontent.com/104325038/214160328-88aeb9cd-e2c6-4c62-96d6-380bc405b981.png)
