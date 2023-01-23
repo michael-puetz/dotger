@@ -1,0 +1,47 @@
+/*
+ * Dotger - A game where you have to dodge objects.
+ * Copyright (C) 2023  Michael Pütz
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ */
+
+package game.gameFieldObjects;
+
+import static game.GameConstants.*;
+
+import game.CircleAngle;
+import game.GameColors;
+import game.animations.Animation;
+
+public class SlowMotionBall extends GameBall {
+
+    public SlowMotionBall() {
+        this(0, 0, new CircleAngle());
+    }
+
+    public SlowMotionBall(double posX, double posY, CircleAngle direction) {
+        super(posX, posY, SLOWMOTIONBALL_RADIUS, direction, SLOWMOTIONBALL_SPEED, GameColors.SLOWMOTIONBALL);
+    }
+
+    @Override
+    public GameFieldObject getInstance(double posX, double posY, CircleAngle direction) {
+        return new SlowMotionBall(posX, posY, direction);
+    }
+    
+    @Override
+	public Animation[] getDestroyAnimations() {
+		return new Animation[0];
+	}
+
+}
